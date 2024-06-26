@@ -485,7 +485,7 @@ cli_init_unix(uid_t use_uid, gid_t use_gid)
     if (chown(path_control_socket, use_uid, use_gid) < 0)
       die("chown: %m");
 
-  if (chmod(path_control_socket, 0660) < 0)
+  if (chmod(path_control_socket, 0600) < 0)
     die("chmod: %m");
 }
 
